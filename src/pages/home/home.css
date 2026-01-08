@@ -1,0 +1,313 @@
+.home-container {
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    min-height: 100vh;
+    position: relative;
+}
+
+.home-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 2rem;
+    margin: 0 auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+
+    transform:
+    
+    rotateY(0deg) scale(0.9)
+    rotateX(0deg);
+  filter: blur(2px);
+  opacity: 0.5;
+  transition: 0.6s ease all;
+
+  &:hover {
+    transform:
+      
+      
+      scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.home-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.home-title {
+    font-size: var(--h1-font-size);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    display: inline-block;
+}
+
+.home-title span {
+    color: var(--first-color);
+    display: block;
+}
+
+.home-title::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    border-radius: 0.5rem;
+    background-color: var(--first-color);
+}
+
+.home-description {
+    line-height: 1.8;
+    margin: var(--spacing-lg) auto;
+    font-size: var(--large-font-size);
+    max-width: 700px;
+}
+
+.color-block {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    background-color: var(--first-color);
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+    top: 50%;
+    left: -150px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* Tablette */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .home-container {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-lg);
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .home-content {
+        text-align: left;
+    }
+    
+    .home-title::before {
+        left: 0;
+        transform: none;
+    }
+    
+    .home-img {
+        max-width: 400px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1025px) {
+    .home-container {
+        grid-template-columns: 4.75fr 7.25fr;
+        gap: 2rem 10rem;
+        padding: 2.5rem;
+    }
+    
+    .home-content {
+        text-align: left;
+    }
+    
+    .home-title {
+        padding-left: 4.25rem;
+    }
+    
+    .home-title::before {
+        left: 0;
+        transform: none;
+        top: 22%;
+        bottom: auto;
+    }
+    
+    .home-img {
+        height: calc(100vh - 5rem);
+        max-width: none;
+        aspect-ratio: auto;
+    }
+    
+    .home-description {
+        text-align: justify;
+    }
+}
+
+/* Mobile petit */
+@media screen and (max-width: 480px) {
+    .home-container {
+        padding: var(--spacing-md) var(--spacing-xs);
+        gap: var(--spacing-md);
+        padding-top: 80px;
+    }
+    
+    .home-img {
+        max-width: 280px;
+        border-radius: 1.5rem;
+    }
+    
+    .home-title {
+        font-size: 1.75rem;
+    }
+    
+    .home-description {
+        font-size: var(--normal-font-size);
+        margin: var(--spacing-md) auto;
+    }
+    
+    .color-block {
+        width: 200px;
+        height: 200px;
+        left: -100px;
+    }
+}
+
+/* Mobile paysage */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    .home-container {
+        min-height: auto;
+        padding-top: 100px;
+    }
+    
+    .home-img {
+        height: 300px;
+        max-width: 300px;
+    }
+}
+
+
+
+/* home.css - Ajoutez ces styles à la fin de votre fichier */
+
+/* Wrapper pour gérer les transitions */
+.home-wrapper {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.home-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Empêcher le scroll pendant le loading */
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Animation d'entrée pour les éléments de la home */
+.home-container {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.home-img {
+  animation: fadeIn 0.8s ease 0.2s forwards;
+  opacity: 0;
+}
+
+.home-content {
+  animation: fadeIn 0.8s ease 0.4s forwards;
+  opacity: 0;
+}
+
+.home-title {
+  animation: slideInLeft 0.8s ease 0.6s forwards;
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.home-description {
+  animation: slideInRight 0.8s ease 0.8s forwards;
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.button {
+  animation: fadeInUp 0.8s ease 1s forwards;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Pour les mobiles - ajustez les animations */
+@media (max-width: 768px) {
+  .home-title {
+    animation: fadeInUp 0.8s ease 0.6s forwards;
+    transform: translateY(20px) translateX(0);
+  }
+  
+  .home-description {
+    animation: fadeInUp 0.8s ease 0.8s forwards;
+    transform: translateY(20px) translateX(0);
+  }
+}
+
+/* Animation pour le contenu après le loading */
+.animated-content {
+  animation: pageFadeIn 0.8s ease forwards;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
