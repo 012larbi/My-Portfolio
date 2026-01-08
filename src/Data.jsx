@@ -135,7 +135,7 @@ export const skill = [
     id: 1,
     img: skillsImg1,
     title: 'HTML',
-    level: 'Intermediate',
+    level: 'Advanced',
     category: 'Frontend',
   },
 
@@ -207,12 +207,20 @@ export const skill = [
     id: 10,
     img: skillsImg10,
     title: 'angular',
-    level: 'Intermediate',
+    level: 'Basic',
     category: 'Frontend',
   },
-  {
+
+   {
     id: 11,
     img: skillsImg11,
+    title: 'Flutter',
+    level: 'basic',
+    category: 'Backend',
+  },
+  {
+    id: 12,
+    img: skillsImg12,
     title: 'MongoDb',
     level: 'Intermediate',
     category: 'Backend',
