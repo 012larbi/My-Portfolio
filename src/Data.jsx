@@ -105,7 +105,7 @@ export const personalInfo = [
 
 export const stats = [
   {
-    no: '3+',
+    no: '5+',
     title: 'Years of <br /> Formation',
   },
 
@@ -303,7 +303,7 @@ export const portfolio = [
     description:
       'FruitAI - Fruit Recognition & Percentage Calculator.',
     skills: [skillsImg1, skillsImg2, skillsImg11],
-    link: '',
+    link: 'https://github.com/012larbi/SmartFruit',
   },
   /*
     {
