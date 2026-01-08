@@ -1,4 +1,4 @@
-import Info from "../../components/info"
+import Info from "../../components/Info"
 import { RiDownload2Line } from "react-icons/ri";
 import './about.css'
 import Cv from '../../pdf/CV.pdf'
