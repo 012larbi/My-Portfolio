@@ -159,7 +159,7 @@ export const skill = [
     id: 4,
     img: skillsImg4,
     title: 'React',
-    level: 'Basic',
+    level: 'Intermediate',
     category: 'Frontend',
   },
 
