@@ -303,7 +303,7 @@ export const portfolio = [
     description:
       'FruitAI - Fruit Recognition & Percentage Calculator.',
     skills: [skillsImg1, skillsImg2, skillsImg11],
-    link: '',
+    link: 'https://github.com/012larbi/SmartFruit',
   },
   /*
     {
