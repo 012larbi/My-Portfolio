@@ -10,46 +10,7 @@ const Loading = () => {
   const requestRef = useRef();
 
   // Créer des étoiles
-  useEffect(() => {
-    const generateStars = () => {
-      const newStars = [];
-      for (let i = 0; i < 50; i++) {
-        newStars.push({
-          id: i,
-          x: Math.random() * 100,
-          y: Math.random() * 100,
-          size: Math.random() * 3 + 1,
-          speed: Math.random() * 0.5 + 0.2,
-          opacity: Math.random() * 0.5 + 0.3,
-          twinkleSpeed: Math.random() * 0.05 + 0.02
-        });
-      }
-      setStars(newStars);
-    };
-    generateStars();
-  }, []);
-
-  // Animation des étoiles
-  useEffect(() => {
-    const animateStars = () => {
-      setStars(prevStars => 
-        prevStars.map(star => ({
-          ...star,
-          y: (star.y + star.speed) % 100,
-          opacity: Math.abs(Math.sin(Date.now() * star.twinkleSpeed)) * 0.5 + 0.3
-        }))
-      );
-      requestRef.current = requestAnimationFrame(animateStars);
-    };
-
-    requestRef.current = requestAnimationFrame(animateStars);
-    return () => {
-      if (requestRef.current) {
-        cancelAnimationFrame(requestRef.current);
-      }
-    };
-  }, []);
-
+  
   // Progression du loading - FIXE à 4 secondes
   useEffect(() => {
     const phases = [
