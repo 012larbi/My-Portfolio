@@ -51,7 +51,7 @@ const About = () => {
 
             <div className="skills-items grid">
               {skill.map((val) => {
-                if (val.category === 'developer') {
+                if (val.category === 'Frontend') {
                   return <SkillsItem key={val.id} {...val} />
                 }
               })}
@@ -63,7 +63,7 @@ const About = () => {
 
             <div className="skills-items grid">
               {skill.map((val) => {
-                if (val.category === 'designer') {
+                if (val.category === 'Backend') {
                   return <SkillsItem key={val.id} {...val} />
                 }
               })}

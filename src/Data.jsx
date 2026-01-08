@@ -14,6 +14,8 @@ import skillsImg8 from './assets/nodejs.svg';
 import skillsImg9 from './assets/java.svg';
 import skillsImg10 from './assets/angular.svg';
 import skillsImg11 from './assets/flutter.png';
+import skillsImg12 from './assets/mongodb.svg';
+
 
 
 
@@ -134,7 +136,7 @@ export const skill = [
     img: skillsImg1,
     title: 'HTML',
     level: 'Intermediate',
-    category: 'developer',
+    category: 'Frontend',
   },
 
   {
@@ -142,7 +144,7 @@ export const skill = [
     img: skillsImg2,
     title: 'CSS',
     level: 'Advanced',
-    category: 'developer',
+    category: 'Frontend',
   },
 
   {
@@ -150,7 +152,7 @@ export const skill = [
     img: skillsImg3,
     title: 'JavaScript',
     level: 'Intermediate',
-    category: 'developer',
+    category: 'Frontend',
   },
 
   {
@@ -158,7 +160,7 @@ export const skill = [
     img: skillsImg4,
     title: 'React',
     level: 'Basic',
-    category: 'developer',
+    category: 'Frontend',
   },
 
   {
@@ -166,7 +168,7 @@ export const skill = [
     img: skillsImg5,
     title: 'Tailwind',
     level: 'Intermediate',
-    category: 'developer',
+    category: 'Frontend',
   },
 
   {
@@ -174,7 +176,7 @@ export const skill = [
     img: skillsImg6,
     title: 'SpringBoot',
     level: 'Intermediate',
-    category: 'designer',
+    category: 'Backend',
   },
 
   {
@@ -182,7 +184,7 @@ export const skill = [
     img: skillsImg7,
     title: 'C#',
     level: 'Intermediate',
-    category: 'designer',
+    category: 'Backend',
   },
 
   {
@@ -190,7 +192,7 @@ export const skill = [
     img: skillsImg8,
     title: 'Node js',
     level: 'Intermediate',
-    category: 'designer',
+    category: 'Backend',
   },
 
   {
@@ -198,7 +200,7 @@ export const skill = [
     img: skillsImg9,
     title: 'Java',
     level: 'Intermediate',
-    category: 'designer',
+    category: 'Backend',
   },
 
   {
@@ -206,7 +208,14 @@ export const skill = [
     img: skillsImg10,
     title: 'angular',
     level: 'Intermediate',
-    category: 'developer',
+    category: 'Frontend',
+  },
+  {
+    id: 11,
+    img: skillsImg11,
+    title: 'MongoDb',
+    level: 'Intermediate',
+    category: 'Backend',
   },
 
 
