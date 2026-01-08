@@ -240,8 +240,8 @@ export const resume = [
     category: 'experience',
     icon: <RiGraduationCapFill />,
     year: '2023 - 2026',
-    title: 'Software Engineering <span> Full Stack Web Development </span>',
-    desc: 'EMSI - Specialized in modern web technologies, cloud architecture, and agile methodologies',
+    title: 'Software Engineering <span> Full Stack Web Development  EMSI - Casablanca</span>',
+    desc: ' Specialized in modern web technologies, cloud architecture, and agile methodologies',
   },
 
   {
@@ -266,7 +266,7 @@ export const resume = [
     id: 4,
     category: 'education',
     icon: <RiGraduationCapFill />,
-    year: '2023',
+    year: '2020-2023',
     title: "Bachelor's Degree in Physics <span> Faculty of Sciences Ben M'Sik - Casablanca </span>",
     desc: 'Specialized in physical sciences with focus on analytical methods, experimental physics, and scientific research methodologies.',
   },
@@ -285,7 +285,7 @@ export const resume = [
     category: 'education',
     icon: <RiGraduationCapFill />,
     year: '2020',
-    title: 'High School Diploma <span> Life Sciences Track - Casablanca </span>',
+    title: 'Baccalaureate in Life and Earth Sciences <span> Life Sciences Track - Casablanca </span>',
     desc: 'Biology and Earth Sciences specialization with honors in mathematics and experimental sciences.',
   },
 ];
