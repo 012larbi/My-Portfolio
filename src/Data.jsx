@@ -15,6 +15,8 @@ import skillsImg9 from './assets/java.svg';
 import skillsImg10 from './assets/angular.svg';
 import skillsImg11 from './assets/flutter.png';
 import skillsImg12 from './assets/mongodb.svg';
+import skillsImg13 from './assets/firebase.png';
+
 
 
 
@@ -70,7 +72,7 @@ export const personalInfo = [
 
   {
     title: 'Nationality : ',
-    description: 'Morocan',
+    description: 'Moroccan',
   },
 
   {
@@ -102,6 +104,7 @@ export const personalInfo = [
     title: 'Langages : ',
     description: 'French, English',
   },
+
 ];
 
 
@@ -211,7 +214,7 @@ export const skill = [
     category: 'Frontend',
   },
 
-   {
+  {
     id: 11,
     img: skillsImg11,
     title: 'Flutter',
@@ -232,23 +235,23 @@ export const skill = [
 
 
 export const resume = [
- {
-  id: 1,
-  category: 'experience',
-  icon: <RiBriefcase4Fill />,
-  year: '2023 - 2026',
-  title: 'Software Engineering <span> Full Stack Web Development </span>',
-  desc: 'EMSI - Specialized in modern web technologies, cloud architecture, and agile methodologies',
-},
+  {
+    id: 1,
+    category: 'experience',
+    icon: <RiGraduationCapFill />,
+    year: '2023 - 2026',
+    title: 'Software Engineering <span> Full Stack Web Development </span>',
+    desc: 'EMSI - Specialized in modern web technologies, cloud architecture, and agile methodologies',
+  },
 
-{
-  id: 2,
-  category: 'education',
-  icon: <RiBriefcase4Fill />,
-  year: '2023 - 2024',
-  title: 'Professional Degree <span> Computer Science & Network Engineering </span>',
-  desc: 'EMSI - Focus on network infrastructure, system administration, and IT security fundamentals',
-},
+  {
+    id: 2,
+    category: 'education',
+    icon: <RiGraduationCapFill />,
+    year: '2023 - 2024',
+    title: 'Professional Degree <span> Computer Science & Network Engineering </span>',
+    desc: 'EMSI - Focus on network infrastructure, system administration, and IT security fundamentals',
+  },
 
   {
     id: 3,
@@ -260,31 +263,31 @@ export const resume = [
   },
 
   {
-  id: 4,
-  category: 'education',
-  icon: <RiGraduationCapFill />,
-  year: '2023',
-  title: "Bachelor's Degree in Physics <span> Faculty of Sciences Ben M'Sik - Casablanca </span>",
-  desc: 'Specialized in physical sciences with focus on analytical methods, experimental physics, and scientific research methodologies.',
-},
+    id: 4,
+    category: 'education',
+    icon: <RiGraduationCapFill />,
+    year: '2023',
+    title: "Bachelor's Degree in Physics <span> Faculty of Sciences Ben M'Sik - Casablanca </span>",
+    desc: 'Specialized in physical sciences with focus on analytical methods, experimental physics, and scientific research methodologies.',
+  },
 
-{
-  id: 5,
-  category: 'experience',
-  icon: <RiGraduationCapFill />,
-  year: '2022',
-  title: "Associate Degree in Physics & Chemistry <span> Ben M'Sik University Hassan II - Casablanca </span>",
-  desc: 'Comprehensive foundation in physical sciences including thermodynamics, quantum mechanics, organic chemistry, and laboratory techniques.',
-},
+  {
+    id: 5,
+    category: 'experience',
+    icon: <RiGraduationCapFill />,
+    year: '2022',
+    title: "Associate Degree in Physics & Chemistry <span> Ben M'Sik University Hassan II - Casablanca </span>",
+    desc: 'Comprehensive foundation in physical sciences including thermodynamics, quantum mechanics, organic chemistry, and laboratory techniques.',
+  },
 
-{
-  id: 6,
-  category: 'education',
-  icon: <RiGraduationCapFill />,
-  year: '2020',
-  title: 'High School Diploma <span> Life Sciences Track - Casablanca </span>',
-  desc: 'Biology and Earth Sciences specialization with honors in mathematics and experimental sciences.',
-},
+  {
+    id: 6,
+    category: 'education',
+    icon: <RiGraduationCapFill />,
+    year: '2020',
+    title: 'High School Diploma <span> Life Sciences Track - Casablanca </span>',
+    desc: 'Biology and Earth Sciences specialization with honors in mathematics and experimental sciences.',
+  },
 ];
 
 
@@ -299,7 +302,7 @@ export const portfolio = [
     title: 'SportPro Ecommerce',
     description:
       'An e-commerce website specializing in sports accessories and clothing',
-    skills: [skillsImg1, skillsImg2, skillsImg5, skillsImg3, skillsImg8],
+    skills: [skillsImg1, skillsImg2, skillsImg5, skillsImg3, skillsImg8, skillsImg12],
     link: 'https://github.com/012larbi/node-ecom',
   },
 
@@ -309,7 +312,7 @@ export const portfolio = [
     title: 'Chat App',
     description:
       'Chat Messenger - Spring Boot Project.',
-    skills: [skillsImg1, skillsImg2, skillsImg9, skillsImg6],
+    skills: [skillsImg1, skillsImg2, skillsImg9, skillsImg6, skillsImg12],
     link: 'https://github.com/012larbi/Chat_App_Larbi_ELAOUAD-Omar_AitAlkadi/tree/main/V_Chat_App',
   },
 
@@ -319,7 +322,7 @@ export const portfolio = [
     title: 'SmartFruit',
     description:
       'FruitAI - Fruit Recognition & Percentage Calculator.',
-    skills: [skillsImg1, skillsImg2, skillsImg11],
+    skills: [skillsImg1, skillsImg2, skillsImg11, skillsImg13],
     link: 'https://github.com/012larbi/SmartFruit',
   },
   /*

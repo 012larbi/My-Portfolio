@@ -1,0 +1,10 @@
+<svg width="1024" height="1024" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer frame -->
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#020617"></rect>
+
+  <!-- Code corner -->
+  <path d="M18 18L26 26" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"></path>
+
+  <!-- Letter L -->
+  <path d="M28 20V40H42" stroke="#E5E7EB" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
