@@ -87,7 +87,7 @@ export const personalInfo = [
 
   {
     title: 'Phone : ',
-    description: '+212 693974704',
+    description: '+212 669171969',
   },
 
   {

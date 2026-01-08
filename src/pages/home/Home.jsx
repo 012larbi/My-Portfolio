@@ -8,6 +8,7 @@ import './home.css';
 const Home = () => {
   const [showContent, setShowContent] = useState(false);
   const [isFirstVisit, setIsFirstVisit] = useState(false);
+  const [imageClicked, setImageClicked] = useState(false); // ✨ NOUVEAU
 
   useEffect(() => {
     // Vérifier si c'est la première visite
@@ -34,47 +35,23 @@ const Home = () => {
     }
   }, []);
 
-  // Animation Maroc pour première visite
-  if (isFirstVisit && !showContent) {
-    return (
-      <div className="morocco-first-load">
-        <div className="morocco-animation-content">
-          {/* Drapeau animé */}
-          <div className="animated-flag">
-            <div className="flag-base"></div>
-            <div className="flag-star-animated">
-              <svg viewBox="0 0 100 100">
-                <path 
-                  d="M50,10 L61,35 L88,35 L67,53 L73,80 L50,65 L27,80 L33,53 L12,35 L39,35 Z"
-                  fill="#006233"
-                />
-              </svg>
-            </div>
-          </div>
-          
-          {/* Message */}
-          <div className="morocco-welcome">
-            <h1>🇲🇦 Welcome from Morocco</h1>
-            <p>Loading exceptional digital experience...</p>
-          </div>
-          
-          {/* Loading simple */}
-          <div className="simple-loader">
-            <div className="loader-bar">
-              <div className="loader-progress"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  // ✨ NOUVELLE FONCTION pour l'animation au clic
+  const handleImageClick = () => {
+    setImageClicked(true);
+    setTimeout(() => setImageClicked(false), 1200);
+  };
 
   // Contenu principal
   return (
     <div className={`home-wrapper ${showContent ? 'visible' : ''}`}>
       <section className="home-container grid animated-content">
         
-        <img className='home-img' src={Profile} alt="Larbi El Aouad" />
+        <img 
+          className={`home-img ${imageClicked ? 'clicked' : ''}`}  // ✨ MODIFIÉ
+          src={Profile} 
+          alt="Larbi El Aouad"
+          onClick={handleImageClick}  // ✨ AJOUTÉ
+        />
         
         <div className="home-content">
           <h1 className="home-title">
@@ -96,7 +73,6 @@ const Home = () => {
           </Link>
         </div>
        
-
         <div className="color-block"></div>
 
          <div className="boxes">
