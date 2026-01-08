@@ -107,7 +107,7 @@ export const personalInfo = [
 
 export const stats = [
   {
-    no: '3+',
+    no: '5+',
     title: 'Years of <br /> Formation',
   },
 
