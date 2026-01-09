@@ -3,7 +3,7 @@ import parse from 'html-react-parser'
 const Stats = () => {
     return (
         <>
-        {stats.map(({no, title}, index)=>{
+        {stats.map(({no, title,}, index)=>{
             return(
                 <div className="stats-box" key={index}>
                     <h3 className="stats-no">{no}</h3>

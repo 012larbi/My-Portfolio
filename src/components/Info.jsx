@@ -1,19 +1,30 @@
-import { personalInfo } from "../Data"
+import { personalInfo } from "../Data";
+
 
 const Info = () => {
     return (
         <>
-            {personalInfo.map(({ title, description, skills }, index) => {
-                return (
-                    <li className="info-items" key={index}>
-                        <span className="info-title"> {title}</span>
-                        <span className="info-description"> {description}</span>
+            {personalInfo.map((item, index) => (
+                <li className="info-item" key={index}>
+                    <span className="info-title">{item.title}</span>
 
-                    </li>
-                )
-            })}
+                    <span className="info-description">
+                        {item.link ? (
+                            <a
+                                href={item.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {item.icon}
+                            </a>
+                        ) : (
+                            item.description
+                        )}
+                    </span>
+                </li>
+            ))}
         </>
-    )
-}
+    );
+};
 
-export default Info
+export default Info;

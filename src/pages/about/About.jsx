@@ -7,6 +7,7 @@ import { skill } from "../../Data";
 import SkillsItem from "../../components/SkillsItem";
 import ResumeItem from "../../components/ResumeItem";
 import { resume } from '../../Data';
+
 const About = () => {
   return (
     <main className="section container">

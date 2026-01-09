@@ -27,6 +27,8 @@ import projectImg3 from './assets/project-3.jpg';
 import projectImg4 from './assets/project-4.jpg';
 import projectImg5 from './assets/project-5.jpg';
 
+import { FaLinkedinIn } from "react-icons/fa";
+
 export const links = [
   {
     name: 'Home',
@@ -59,52 +61,43 @@ export const personalInfo = [
     title: 'First Name : ',
     description: 'Larbi',
   },
-
   {
     title: 'Last Name : ',
     description: 'El Aouad',
   },
-
   {
     title: 'Age : ',
     description: '23 Years',
   },
-
   {
     title: 'Nationality : ',
     description: 'Moroccan',
   },
-
   {
     title: 'Freelance : ',
     description: 'Available',
   },
-
   {
     title: 'Address : ',
     description: 'Casablanca',
   },
-
   {
     title: 'Phone : ',
-    description: '+212 669171969',
+    description: '+212 69171969',
   },
-
   {
     title: 'Email : ',
-    description: 'Larbi.louad.el@mail.com',
+    description: 'Larbi.elad@mail.com',
   },
-
   {
-    title: 'Linkedin : ',
-    description: 'https://www.linkedin.com/in/larbielaouad/',
+    title: 'LinkedIn : ',
+    icon: <FaLinkedinIn className="nav-icon" />,
+    link: 'https://www.linkedin.com/in/larbielaouad/',
   },
-
   {
-    title: 'Langages : ',
+    title: 'Languages : ',
     description: 'French, English',
   },
-
 ];
 
 
