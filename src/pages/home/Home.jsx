@@ -13,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     // Vérifier si c'est la première visite
     const hasVisitedBefore = localStorage.getItem('hasVisitedBefore');
-    
+
     if (hasVisitedBefore === 'true') {
       // Déjà visité - montrer directement le contenu
       setTimeout(() => {
@@ -23,10 +23,10 @@ const Home = () => {
       // Première visite
       setIsFirstVisit(true);
       localStorage.setItem('hasVisitedBefore', 'true');
-      
+
       // Empêcher le scroll pendant l'animation
       document.body.classList.add('no-scroll');
-      
+
       // Montrer l'animation Maroc pendant 3 secondes
       setTimeout(() => {
         setShowContent(true);
@@ -45,14 +45,14 @@ const Home = () => {
   return (
     <div className={`home-wrapper ${showContent ? 'visible' : ''}`}>
       <section className="home-container grid animated-content">
-        
-        <img 
+
+        <img
           className={`home-img ${imageClicked ? 'clicked' : ''}`}  // ✨ MODIFIÉ
-          src={Profile} 
+          src={Profile}
           alt="Larbi El Aouad"
           onClick={handleImageClick}  // ✨ AJOUTÉ
         />
-        
+
         <div className="home-content">
           <h1 className="home-title">
             <span>I'm Larbi El Aouad </span> <br /> Web Developer
@@ -72,12 +72,12 @@ const Home = () => {
             </span>
           </Link>
         </div>
-       
+
         <div className="color-block"></div>
 
-         <div className="boxes">
+        <div className="boxes">
           <div className="box"></div>
-         </div>
+        </div>
       </section>
     </div>
   );
