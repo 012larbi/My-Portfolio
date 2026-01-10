@@ -4,6 +4,7 @@ import Profile from '../../assets/larbi.jpg';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa6";
 import './home.css';
+import { TypeAnimation } from "react-type-animation";
 
 const Home = () => {
   const [showContent, setShowContent] = useState(false);
@@ -45,17 +46,30 @@ const Home = () => {
   return (
     <div className={`home-wrapper ${showContent ? 'visible' : ''}`}>
       <section className="home-container grid animated-content">
-
+        
         <img
-          className={`home-img ${imageClicked ? 'clicked' : ''}`}  // ✨ MODIFIÉ
+          className={`home-img ${imageClicked ? 'clicked' : ''}`} 
           src={Profile}
           alt="Larbi El Aouad"
-          onClick={handleImageClick}  // ✨ AJOUTÉ
+          onClick={handleImageClick}  
         />
 
         <div className="home-content">
           <h1 className="home-title">
-            <span>I'm Larbi El Aouad </span> <br /> Web Developer
+            <span>I'm Larbi El Aouad </span> <br /> 
+            <TypeAnimation
+        sequence={[
+          "Front-End Developer",
+          2500,
+          "Backend Developer",
+          2500,
+          "Full-Stack Developer",
+          2500,
+        ]}
+        speed={10}
+        repeat={Infinity}
+        
+      />
           </h1>
 
           <p className="home-description">

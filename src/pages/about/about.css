@@ -292,6 +292,7 @@
 
     .info-list {
         grid-template-columns: repeat(2, 1fr);
+
     }
 
 
@@ -429,6 +430,15 @@
     .section-subtitle {
         text-align: center;
     }
+
+    .info-list {
+
+        display: grid;
+        gap: var(--spacing-md);
+        margin-bottom: var(--spacing-lg);
+        text-align: center;
+    }
+
 
 
 }
