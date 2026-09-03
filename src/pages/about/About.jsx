@@ -3,12 +3,13 @@ import { RiDownload2Line } from "react-icons/ri";
 import './about.css'
 import Cv from '../../pdf/CV.pdf'
 import Stats from "../../components/Stats";
-import { skill } from "../../Data";
 import SkillsItem from "../../components/SkillsItem";
 import ResumeItem from "../../components/ResumeItem";
-import { resume } from '../../Data';
+import { useAboutContent } from "../../content/useAboutContent";
 
 const About = () => {
+  const { about } = useAboutContent();
+
   return (
     <main className="section container">
       <section className="about">
@@ -23,7 +24,7 @@ const About = () => {
             </h3>
 
             <ul className="info-list grid">
-              <Info />
+              <Info items={about.personalInfo} />
             </ul>
 
             <a href={Cv} className="button"> Download Cv
@@ -35,7 +36,7 @@ const About = () => {
           </div>
 
           <div className="stats grid">
-            <Stats />
+            <Stats items={about.stats} />
           </div>
         </div>
       </section>
@@ -51,10 +52,11 @@ const About = () => {
             <h3 className="skills-title">Frontend Developer</h3>
 
             <div className="skills-items grid">
-              {skill.map((val) => {
+              {about.skills.map((val) => {
                 if (val.category === 'Frontend') {
                   return <SkillsItem key={val.id} {...val} />
                 }
+                return null;
               })}
             </div>
           </div>
@@ -63,10 +65,11 @@ const About = () => {
             <h3 className="skills-title">Backend Developer</h3>
 
             <div className="skills-items grid">
-              {skill.map((val) => {
+              {about.skills.map((val) => {
                 if (val.category === 'Backend') {
                   return <SkillsItem key={val.id} {...val} />
                 }
+                return null;
               })}
             </div>
           </div>
@@ -80,18 +83,20 @@ const About = () => {
 
         <div className="resume-container grid">
           <div className="resume-group grid">
-            {resume.map((val)=>{
-              if(val.category==='experience'){
+            {about.resume.map((val) => {
+              if (val.category === 'experience') {
                 return <ResumeItem key={val.id} {...val} />;
               }
+              return null;
             })}
           </div>
 
           <div className="resume-group grid">
-            {resume.map((val)=>{
-              if(val.category==='education'){
+            {about.resume.map((val) => {
+              if (val.category === 'education') {
                 return <ResumeItem key={val.id} {...val} />;
               }
+              return null;
             })}
           </div>
         </div>

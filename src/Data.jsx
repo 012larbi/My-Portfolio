@@ -15,19 +15,19 @@ import skillsImg9 from './assets/java.svg';
 import skillsImg10 from './assets/angular.svg';
 import skillsImg11 from './assets/flutter.png';
 import skillsImg12 from './assets/mongodb.svg';
-import skillsImg13 from './assets/firebase.png';
 
 
 
 
-
-import projectImg1 from './assets/project-1.jpg';
-import projectImg2 from './assets/project-2.jpg';
-import projectImg3 from './assets/project-3.jpg';
-import projectImg4 from './assets/project-4.jpg';
-import projectImg5 from './assets/project-5.jpg';
 
 import { FaLinkedinIn } from "react-icons/fa";
+
+// NOTE: Projects are no longer stored here. They now live in a single
+// dynamic source of truth managed from the Admin Dashboard (/admin):
+//   - schema & migrated seed data ... src/data/seedProjects.js
+//   - data access layer ............. src/projects/projectsStore.js
+//   - categories ................... managed at /admin/categories
+//                                    (defaults: src/config/projectCategories.js)
 
 export const links = [
   {
@@ -288,54 +288,4 @@ export const resume = [
 
 
 
-export const portfolio = [
-  {
-    id: 1,
-    img: projectImg1,
-    title: 'SportPro Ecommerce',
-    description:
-      'An e-commerce website specializing in sports accessories and clothing',
-    skills: [skillsImg1, skillsImg2, skillsImg5, skillsImg3, skillsImg8, skillsImg12],
-    link: 'https://github.com/012larbi/node-ecom',
-  },
-
-  {
-    id: 2,
-    img: projectImg2,
-    title: 'Chat App',
-    description:
-      'Chat Messenger - Spring Boot Project.',
-    skills: [skillsImg1, skillsImg2, skillsImg9, skillsImg6, skillsImg12],
-    link: 'https://github.com/012larbi/Chat_App_Larbi_ELAOUAD-Omar_AitAlkadi/tree/main/V_Chat_App',
-  },
-
-  {
-    id: 3,
-    img: projectImg3,
-    title: 'SmartFruit',
-    description:
-      'FruitAI - Fruit Recognition & Percentage Calculator.',
-    skills: [skillsImg1, skillsImg2, skillsImg11, skillsImg13],
-    link: 'https://github.com/012larbi/SmartFruit',
-  },
-  /*
-    {
-      id: 4,
-      img: projectImg4,
-      title: 'Barbershop Website',
-      description:
-        'Short description of the project that was carried out in this portfolio.',
-      skills: [skillsImg4, skillsImg5],
-      link: '',
-    },
-  
-    {
-      id: 5,
-      img: projectImg5,
-      title: 'Construction Landing Page',
-      description:
-        'Short description of the project that was carried out in this portfolio.',
-      skills: [skillsImg1, skillsImg2, skillsImg3],
-      link: '',
-    },*/
-];
+// (Projects moved to the dynamic store — see note near the top of this file.)

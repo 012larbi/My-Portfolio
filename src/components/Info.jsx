@@ -1,10 +1,10 @@
-import { personalInfo } from "../Data";
+import { FaLinkedinIn } from "react-icons/fa";
+import { ABOUT_DEFAULTS } from "../content/aboutDefaults";
 
-
-const Info = () => {
+const Info = ({ items = ABOUT_DEFAULTS.personalInfo }) => {
     return (
         <>
-            {personalInfo.map((item, index) => (
+            {items.map((item, index) => (
                 <li className="info-item" key={index}>
                     <span className="info-title">{item.title}</span>
 
@@ -15,7 +15,7 @@ const Info = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                {item.icon}
+                                <FaLinkedinIn className="nav-icon" />
                             </a>
                         ) : (
                             item.description

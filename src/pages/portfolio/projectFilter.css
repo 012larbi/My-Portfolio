@@ -1,0 +1,110 @@
+/* ===============================================================
+   PROJECT FILTER  (prefix: .pf)
+   Vertical sidebar on desktop, horizontal scrollable chips on
+   mobile. Uses the site design tokens only — no gradients.
+   =============================================================== */
+
+.pf {
+  flex: 0 0 200px;
+  align-self: flex-start;
+  position: sticky;
+  top: var(--spacing-xl);
+}
+
+.pf__heading {
+  font-size: var(--smaller-font-size);
+  font-weight: var(--weight-700);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-color);
+  opacity: 0.65;
+  margin-bottom: var(--spacing-sm);
+  padding-left: 0.25rem;
+}
+
+.pf__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.pf__item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: 0.7rem;
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--weight-600);
+  text-align: left;
+  transition: background-color 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.pf__item:hover {
+  background-color: var(--container-color);
+  color: var(--title-color);
+}
+
+.pf__item--active {
+  background-color: var(--first-color);
+  color: #fff;
+  border-color: var(--first-color);
+}
+
+.pf__count {
+  font-size: var(--smaller-font-size);
+  font-weight: var(--weight-700);
+  opacity: 0.75;
+  min-width: 1.4rem;
+  text-align: center;
+}
+
+.pf__item--active .pf__count {
+  opacity: 0.9;
+}
+
+/* ---------- Mobile / tablet: horizontal scroll chips ---------- */
+@media screen and (max-width: 1024px) {
+  .pf {
+    flex-basis: auto;
+    position: static;
+    width: 100%;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .pf__heading {
+    display: none;
+  }
+
+  .pf__list {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.35rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .pf__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pf__item {
+    width: auto;
+    flex: 0 0 auto;
+    border-color: var(--border-color);
+    background-color: var(--container-color);
+    border-radius: 2rem;
+    padding: 0.5rem 0.95rem;
+  }
+
+  .pf__count {
+    min-width: 0;
+  }
+}
