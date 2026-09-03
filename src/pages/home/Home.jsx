@@ -73,7 +73,7 @@ const Home = () => {
           </h1>
 
           <p className="home-description">
-            I am a Moroccan based web developer & front-end developer focused on
+            I am a Moroccan based web developer & Full-Stack developer focused on
             crafting clean & user-friendly experiences,
             I am passionate about building excellent software
             that improves the lives of those around me.
